@@ -1,3 +1,10 @@
+/* ROOT */
+:root {
+    --footer-height: 90px;
+    --footer-bg-color: #222222;
+    --black-color: #000000;
+    --padding-five: 5px;
+}
 /* RESET */
 * {
     margin: 0;
@@ -6,10 +13,78 @@
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 
+/* COMMON */
 body {
     /* debug */
     /* background-color: red; */
+}
+
+main {
+    height: calc(100vh - var(--footer-height));
+    padding-top: 80px;
+
+    /* debug */
+    background-color: var(--black-color);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+    width: 100%;
+    height: var(--footer-height);
+
+    /* debug */
+    background-color: var(--footer-bg-color);
+}
+
+/* UTILITIES */
+.container {
+    width: 90%;
+    margin: 0 auto ;
+    /* debug */
+    /* background-color: white; */
+}
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.col {
+    position: relative;
+
+    width: calc(100% / 7);
+    height: 150px;
+
+    padding: var(--padding-five);
+
+    min-height: 150px;
+    min-width: 200px;
+    max-width: 300px;
+
+    /* debug */
+    /* background-color: lightcoral; */
+}
+
+.tag {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    padding: var(--padding-five);
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tag .username {
+
 }
