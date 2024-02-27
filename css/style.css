@@ -75,6 +75,10 @@ footer {
     font-size: 30px;
 }
 
+.right-side {
+    justify-content: end;
+}
+
 i.fa-chevron-up {
     font-size: 15px;
 }
@@ -158,4 +162,15 @@ footer ul li {
     justify-content: end;
     align-items: center;
     padding-right: 10px;
+}
+
+.end-meeting {
+    height: var(--footer-height);
+    background-color: #4A4A4A;
+}
+
+.end-meeting a {
+    text-decoration: none;
+    color: red;
+    padding: 20px;
 }
