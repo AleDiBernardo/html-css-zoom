@@ -1,6 +1,8 @@
 /* ROOT */
 :root {
     --footer-height: 90px;
+    --header-height: 80px;
+
     --footer-bg-color: #222222;
     --black-color: #000000;
     --padding-five: 5px;
@@ -10,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
 }
 
 img {
@@ -21,14 +24,27 @@ img {
 body {
     /* debug */
     /* background-color: red; */
+    font-size: 1.2rem;
 }
 
 main {
     height: calc(100vh - var(--footer-height));
     padding-top: 80px;
+    overflow-y: scroll;
 
     /* debug */
     background-color: var(--black-color);
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    height: var(--header-height);
+    /* debug */
+    background-color: black;   
 }
 
 footer {
@@ -39,8 +55,19 @@ footer {
     width: 100%;
     height: var(--footer-height);
 
-    /* debug */
     background-color: var(--footer-bg-color);
+}
+
+
+ul {
+    list-style: none;
+    column-gap: 20px;
+}
+
+ul li {
+    background-color: #4A4A4A;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 /* UTILITIES */
@@ -80,11 +107,16 @@ footer {
     left: 5px;
     bottom: 5px;
     padding: var(--padding-five);
+    font-size: 1rem;
 
     color: white;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.tag .username {
-
+.header-btn {
+    height: 100%;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
 }
+
