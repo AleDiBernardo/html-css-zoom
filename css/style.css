@@ -21,6 +21,12 @@ img {
 }
 
 /* COMMON */
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
 body {
 
     font-size: 1.2rem;
@@ -174,3 +180,4 @@ footer ul li {
     color: red;
     padding: 20px;
 }
+
