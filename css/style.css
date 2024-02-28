@@ -34,10 +34,6 @@ body {
 
 /* HEADER SECTION  */
 header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 9999;
     width: 100%;
     height: var(--header-height);
     background-color: black;   
@@ -59,7 +55,7 @@ header ul li {
 
 /* MAIN SECTION */
 main {
-    height: calc(100vh - var(--footer-height));
+    height: calc(100% - var(--footer-height) - var(--header-height));
     padding-top: 80px;
     overflow-y: scroll;
 
@@ -107,10 +103,6 @@ i.fa-chevron-up {
 
 /* FOOTER */
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 9999;
     width: 100%;
     height: var(--footer-height);
 
